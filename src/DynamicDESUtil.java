@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
  * @Version 1.0
  */
 public class DynamicDESUtil {
-
     private static final String STR_16 = "0123456789ABCDEF";
 
     /**
