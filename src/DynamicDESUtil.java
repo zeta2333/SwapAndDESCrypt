@@ -19,7 +19,7 @@ public class DynamicDESUtil {
      * @param key 明文秘钥
      * @return 16进制密文字符串
      */
-    public  String encryption(String msg, String key,long seed) {
+    public String encryption(String msg, String key, long seed) {
         init(seed);
         //检查二进制字符串是否是64位
         String msgbin = Check64(hex2Bin(str2Hex(msg)));
@@ -45,7 +45,7 @@ public class DynamicDESUtil {
      * @param key    解密/加密 秘钥
      * @return 明文字符串
      */
-    public  String decryption(String cipher, String key,long seed) {
+    public String decryption(String cipher, String key, long seed) {
         init(seed);
         String msgbin = hex2Bin(cipher);
         key = Check64(hex2Bin(str2Hex(key)));
@@ -58,7 +58,6 @@ public class DynamicDESUtil {
             mm.append(Wheel(binmsg, keys));
         }
         return hex2Str(bin2Hex(mm.toString().trim())).trim();
-
     }
     // =========进制转换===============
 
